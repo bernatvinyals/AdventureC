@@ -4,3 +4,5 @@
 *.vcxproj
 *.db
 *.opendb
+*.ipch
+Adventure/.vs/Adventure/v15/.suo
