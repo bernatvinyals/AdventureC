@@ -83,6 +83,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		}
 		else
 		{
+			cout << "This is the secretary office, nothing special, there's just a desk and a bench.";
 			break;
 		}
 	case 3:

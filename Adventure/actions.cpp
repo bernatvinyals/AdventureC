@@ -30,8 +30,83 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		cout << "Game over";
 		notend = false;
 		break;
+
+	case 21205:
+		if (comprovadors[0] == true)
+		{
+			cout << "You shouldn't go into the bosses office until you have the coffe\n";
+		}
+		break;
+	case 21201:
+		hab = 3;
+		
+		break;
+	case 21204:
+
+		hab = 5;
+		break;
+	case 21203:
+		break;
+
+
+
+	case 31201:
+		cout << "There's nowere to go there";
+		break;
+	case 31204:
+		hab = 6;
+		break;
+	case 31203:
+		hab = 2;
+		break;
+	case 31205:
+		hab = 4;
+		break;
+
+
+
+	case 41204:
+		hab = 3;
+		break;
+
+	
+	
+	case 61204:
+		hab = 7;
+		break;
+	case 61205:
+		hab = 3;
+		break;
+
+
+	case 71204:
+		hab = 10;
+		break;
+	case 71203:
+		hab = 8;
+		break;
+	case 71205:
+		hab = 6;
+		break;
+
+
+	case 81204:
+		hab = 9;
+		break;
+	case 81201:
+		hab = 7;
+		break;
+
+	case 91205:
+		hab = 8;
+		break;
+
+	case 101205:
+		hab = 7;
+		break;
+
 	default:
-		cout << "My thoughts are blured and i dont even know what i'm saying";
+		cout << "My thoughts are blured and i dont even know what i'm saying\n";
 		break;
 	}
 	cout << endl;

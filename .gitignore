@@ -6,3 +6,10 @@
 *.opendb
 *.ipch
 Adventure/.vs/Adventure/v15/.suo
+*.pdb
+*.obj
+*.idb
+*.tlog
+*.log
+*.ilk
+*.exe
