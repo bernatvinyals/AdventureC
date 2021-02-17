@@ -9,7 +9,7 @@ extern bool comprovadors[8];
 
 void omplirInventari(Object inventari[]) {
 	inventari[0].Nom = "Booss mug";
-	inventari[0].hotinc = "Booss mug";
+	inventari[0].hotinc = false;
 	inventari[0].onEsta = 2;
 
 }
@@ -61,7 +61,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			if (inventari[0].onEsta == hab)
 			{
 				inventari[0].hotinc = true;
-				inventari[0].onEsta = 89;
+				inventari[0].onEsta = 0;
 				cout << "You picked the Bosses Mug\n";
 			}
 			else
