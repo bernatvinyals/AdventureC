@@ -11,7 +11,9 @@ void omplirInventari(Object inventari[]) {
 	inventari[0].Nom = "Booss mug";
 	inventari[0].hotinc = false;
 	inventari[0].onEsta = 2;
-
+	inventari[1].Nom = "5$";
+	inventari[1].hotinc = false;
+	inventari[1].onEsta = 31;
 }
 
 void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[]) {
@@ -42,7 +44,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	case 21205:
 		if (comprovadors[0] == true)
 		{
-			cout << "You shouldn't go into the bosses office until you have the coffe\n";
+			cout << "You shouldn't go into the bosses office until you have the coffee\n";
 		}
 		break;
 	case 21201:
@@ -55,7 +57,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		break;
 	case 21203:
 		break;
-	case 20007:
+	case 20007://Grab Mug
 		if (inventari[0].hotinc == false)
 		{
 			if (inventari[0].onEsta == hab)
@@ -69,10 +71,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 				isItem = true;
 			}
 		}
-		
 		break;
-
-
 
 	case 31201:
 		cout << "There's nowere to go there";
@@ -101,6 +100,10 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	case 61205:
 		hab = 3;
 		break;
+	case 60509:
+		cout << "You have a great time talking with your colleagues but you also forget that you had to get coffee for your boss.\n";
+		cout << "Game over";
+		notend = false;
 
 
 	case 71204:

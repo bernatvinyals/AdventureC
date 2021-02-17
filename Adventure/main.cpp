@@ -14,7 +14,7 @@ int pharser(string phrase, int hab) {
 	bool saved = false;
 	//                  0        1       2        3       4      5        6       7      8        9       10       11     12      13      14           
 	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "yell", "acces", "kill", "sleep", "go", "punch", "look"};
-	string names[8] = {"boss", "out", "pen", "north", "east", "west", "south", "mug" };
+	string names[10] = {"boss", "out", "pen", "north", "east", "west", "south", "mug", "receptionist", "colleagues" };
 
 	for (size_t i = 0; i < 15; i++)//Mirar els verbs
 	{
@@ -30,7 +30,7 @@ int pharser(string phrase, int hab) {
 		}
 	}
 	saved = false;
-	for (size_t i = 0; i < 8; i++)//Mirar els noms/objectes
+	for (size_t i = 0; i < 10; i++)//Mirar els noms/objectes
 	{
 		if (saved)
 		{
