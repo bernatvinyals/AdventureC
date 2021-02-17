@@ -54,9 +54,19 @@ void whatRoom(int hab) {
 		break;
 	}
 }
-
+bool checkItem(Object inventari[], int hab) {
+	for (int i = 0; i < 10; i++)//amount of items
+	{
+		if (inventari[i].onEsta == hab)
+		{
+			return true;
+		}
+	}
+	return false;
+}
 void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool comprovadors[]) {
 	cout << endl;
+	string objphrase;
 	switch (hab)
 	{
 	case 1: //Boss Ofice
@@ -66,6 +76,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 			cout << "You are having a horrible day at work and your boss just asked for more coffee as if you were a maid. You obviously accept because this is the only job that would hire you as an intern and you have to pay your student loans.";
 			started = true;
 			comprovadors[0] = true;
+			comprovadors[1] = false;
 		}
 		if (finished)
 		{
@@ -76,14 +87,38 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 			break;
 		}
 	case 2: //Secretary Office
-		if (comprovadors[0]!=false)
+		if (comprovadors[0]== true && comprovadors[1] == false)
 		{
-			cout << "You get out of the boss office and decide to go to \'Storage 2\' and pick the coffee grains that you need.";
+			cout << "You get out of the boss office and decide to go to \'Storage 2\' and pick the coffee grains that you need.\nAlso you decide to grab the 'bosses mug'.\n(To do so say 'grab mug')";
 			comprovadors[1] = true;
+			for (int i = 0; i < 10; i++)//amount of items
+			{
+				if (inventari[i].onEsta == 2)
+				{
+					
+					objphrase = inventari[i].Nom;
+					cout << "\nObjects in room: " << objphrase;
+				}
+			}
+			//cout << "I can see that there is a couple of objects here:\n" << objphrase;
 		}
 		else
 		{
-			cout << "This is the secretary office, nothing special, there's just a desk and a bench.";
+			cout << "This is the secretary office, nothing special about it.";
+			
+			if (checkItem(inventari, hab))
+			{
+				for (int i = 0; i < 10; i++)//amount of items
+				{
+					if (inventari[i].onEsta == 2)
+					{
+						objphrase.append(inventari[i].Nom);
+						objphrase.append(" and ");
+					}
+				}
+			}
+			
+			cout<< "I can see that there's a "<< objphrase;
 			break;
 		}
 	case 3:

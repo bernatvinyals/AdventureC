@@ -6,9 +6,17 @@
 using namespace std;
 extern Object inventari[10];
 extern bool comprovadors[8];
+
+void omplirInventari(Object inventari[]) {
+	inventari[0].Nom = "Booss mug";
+	inventari[0].hotinc = "Booss mug";
+	inventari[0].onEsta = 2;
+
+}
+
 void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[]) {
 	cout << endl;
-
+	bool isItem=false; //Per dir que el objecte no esta (true)
 	switch (CN)
 	{
 	case 10401:
@@ -46,6 +54,22 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		hab = 5;
 		break;
 	case 21203:
+		break;
+	case 20007:
+		if (inventari[0].hotinc == false)
+		{
+			if (inventari[0].onEsta == hab)
+			{
+				inventari[0].hotinc = true;
+				inventari[0].onEsta = 89;
+				cout << "You picked the Bosses Mug\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		
 		break;
 
 
@@ -108,6 +132,10 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	default:
 		cout << "My thoughts are blured and i dont even know what i'm saying\n";
 		break;
+	}
+	if (isItem)
+	{
+		cout << "There isn't such a thing in here";
 	}
 	cout << endl;
 }
