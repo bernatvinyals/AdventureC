@@ -25,10 +25,10 @@ void omplirInventari(Object inventari[]) {
 	inventari[4].onEsta = 31;
 	inventari[5].Nom = "Coffee grains"; //Can get this by buying it on the store
 	inventari[5].hotinc = false;
-	inventari[5].onEsta = 4;
+	inventari[5].onEsta = 34;
 	inventari[6].Nom = "Soda Can"; //Can get this by buying it on the store
 	inventari[6].hotinc = false;
-	inventari[6].onEsta = 4;
+	inventari[6].onEsta = 34;
 }
 void grabItem(Object &inventari, bool &isItem, int hab) {
 	if (inventari.hotinc == false)
