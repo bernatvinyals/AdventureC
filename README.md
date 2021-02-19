@@ -43,6 +43,19 @@ Main Storyline:
 - **(Not implemented)** Now the game will ask you what do you want to combine that with and in order to progress you have to say ``` coffee grains``` works in reversal
 - **(Not implemented)** And it's almost over! Now you have to go to your bosses office and you will beat the game.
 
+# MAP:
+```
++-------------+------------------+----------------+------------------+-----------+
+|             |                  |                |                  |           |
+| Boss Office   Secretary Office   Meeting office | Storage            Storage 2 |
+|             |                  |                |                  |           |
++-------------+-------  ---------+----------------+-------  ---------+-----------+
+|             |                  |                |                  |           |
+| Market        Reception          Open Office      Free time office   Balcony   |
+|             |                  |                |                  |           |
++-------------+------------------+----------------+------------------+-----------+
+```
+
 # DICTIONARY:
 
 ### VERBS:
