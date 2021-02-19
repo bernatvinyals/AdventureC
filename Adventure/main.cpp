@@ -13,7 +13,7 @@ int pharser(string phrase, int hab) {
 	int CN;
 	bool saved = false;
 	//                  0        1       2        3       4      5        6       7      8        9       10       11     12      13      14           
-	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "yell", "acces", "ask", "sleep", "go", "punch", "drop"};
+	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "combine", "acces", "ask", "sleep", "go", "punch", "drop"};
 	string names[17] = {"receptionist", "out", "pen", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary" };
 
 	for (size_t i = 0; i < 15; i++)//Mirar els verbs

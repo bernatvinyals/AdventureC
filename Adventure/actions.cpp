@@ -168,7 +168,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			isHaveit = true;
 		}
 		break;
+	case 10012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 11412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
 
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 10010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 11410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 10011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 11411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
 
 
 
@@ -302,7 +385,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			isHaveit = true;
 		}
 		break;
+	case 20012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 21412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
 
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 20010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 21410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 20011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 21411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
 
 
 
@@ -436,7 +602,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			isHaveit = true;
 		}
 		break;
+	case 30012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 31412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
 
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 30010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 31410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 30011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 31411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
 
 
 
@@ -549,6 +798,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			inventari[3].hotinc = false;
 			inventari[3].onEsta = hab;
 			cout << "You droped the PS1 Controller\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 40012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 41412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 40010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 41410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 40011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 41411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
 
 		}
 		else
@@ -681,7 +1014,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			isHaveit = true;
 		}
 		break;
+	case 60012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 61412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
 
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 60010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 61410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 60011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 61411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
 
 
 
@@ -806,7 +1222,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			isHaveit = true;
 		}
 		break;
+	case 70012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 71412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
 
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 70010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 71410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 70011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 71411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
 
 
 	case 81204:
@@ -920,6 +1419,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			inventari[3].hotinc = false;
 			inventari[3].onEsta = hab;
 			cout << "You droped the PS1 Controller\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 80012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 81412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 80010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 81410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 80011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 81411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
 
 		}
 		else
@@ -1044,6 +1627,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			isHaveit = true;
 		}
 		break;
+	case 90012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 91412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 90010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 91410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 90011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 91411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
 
 
 	case 101205:
@@ -1155,6 +1822,90 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			inventari[3].onEsta = hab;
 			cout << "You droped the PS1 Controller\n";
 			
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 100012://Grab Storage Key
+		if (inventari[4].hotinc == false)
+		{
+			if (inventari[4].onEsta == hab)
+			{
+				inventari[4].hotinc = true;
+				inventari[4].onEsta = 0;
+				cout << "You picked the Storage Key\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 101412: //Drop Storage Key
+		if (inventari[4].hotinc == true)
+		{
+			inventari[4].hotinc = false;
+			inventari[4].onEsta = hab;
+			cout << "You droped the Storage Key\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 100010://Grab Coffee grains
+		if (inventari[5].hotinc == false)
+		{
+			if (inventari[5].onEsta == hab)
+			{
+				inventari[5].hotinc = true;
+				inventari[5].onEsta = 0;
+				cout << "You picked the Coffee grains\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 101410: //Drop Coffee grains
+		if (inventari[5].hotinc == true)
+		{
+			inventari[5].hotinc = false;
+			inventari[5].onEsta = hab;
+			cout << "You droped the Coffee grains\n";
+
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		break;
+	case 100011://Grab Soda Can
+		if (inventari[6].hotinc == false)
+		{
+			if (inventari[6].onEsta == hab)
+			{
+				inventari[6].hotinc = true;
+				inventari[6].onEsta = 0;
+				cout << "You picked the Soda Can\n";
+			}
+			else
+			{
+				isItem = true;
+			}
+		}
+		break;
+	case 101411: //Drop Soda Can
+		if (inventari[6].hotinc == true)
+		{
+			inventari[6].hotinc = false;
+			inventari[6].onEsta = hab;
+			cout << "You droped the Soda Can\n";
+
 		}
 		else
 		{
