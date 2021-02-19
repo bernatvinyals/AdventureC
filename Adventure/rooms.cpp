@@ -89,7 +89,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 	case 2: //Secretary Office
 		if (comprovadors[0]== true && comprovadors[1] == false)
 		{
-			cout << "You get out of the boss office and decide to go to \'Storage 2\' and pick the coffee grains that you need.\nAlso you decide to grab the 'bosses mug'.\n(To do so say 'grab mug')";
+			cout << "You get out of the boss office and decide to go to \'Storage 2\' and pick the coffee grains that you need.\nAlso you decide to grab the 'bosses mug'.\n(To do so say 'grab mug')\nAlso it seems that the secretary wants to talk to you.";
 			comprovadors[1] = true;
 			
 			//cout << "I can see that there is a couple of objects here:\n" << objphrase;
