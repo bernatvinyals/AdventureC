@@ -46,7 +46,7 @@ void grabItem(Object &inventari, bool &isItem, int hab) {
 	}
 }
 void dropItem(Object &inventari, bool &isItem, int hab) {
-	if (inventari.hotinc == hab)
+	if (inventari.hotinc == true)
 	{
 		inventari.hotinc = false;
 		inventari.onEsta = hab;
@@ -59,7 +59,7 @@ void dropItem(Object &inventari, bool &isItem, int hab) {
 	
 }
 
-void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[]) {
+void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[], int &second) {
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
@@ -146,7 +146,20 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 
 		hab = 5;
 		break;
-	
+	case 21016:
+		if (comprovadors[4]== false)
+		{
+			comprovadors[4] = true;
+			inventari[4].hotinc = true;
+			cout << "The secretary gives you the Storage key. Now don't lose it!\n";
+		}
+		break;
+	case 21012://ask secretary for storage key
+		if (second == 16)
+		{
+			//__________________________________________________add what 21016 does
+		}
+		break;
 	case 20007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
 		break;
@@ -363,7 +376,15 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		hab = 10;
 		break;
 	case 71203:
-		hab = 8;
+		if (comprovadors[4] == false)
+		{
+			cout << "It's locked... I guess i have to ask to the Secretary for the key\n";
+		}
+		else
+		{
+			hab = 8;
+		}
+		
 		break;
 	case 71205:
 		hab = 6;

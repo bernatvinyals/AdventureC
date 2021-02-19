@@ -135,7 +135,11 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 
 		break;
 	case 9: //Storage 2
-
+		if (comprovadors[5]==false)
+		{
+			cout << "You enter to Storage 2 and oh what a non pleasant surprise! There's no Coffee grains! Now you should go and buy some with company money, but where and who should you ask? Your boss clearly doesn't want to see you, you just talked to the Secretary and maybe shell find it strange that you ask too many things. Maybe try and ask the Receptionist.\n";
+			comprovadors[5] = true;
+		}
 		break;
 	case 10: //Balcony
 
@@ -155,4 +159,15 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 			}
 		}
 	}
+}
+void showHeader() {
+	cout << "  /$$$$$$                                 /$$                                 \n";
+	cout << " /$$__  $$                               | $$                                 \n";
+	cout << "| $$  \ $$ /$$    /$$/$$$$$$  /$$$$$$$  /$$$$$$   /$$   /$$  /$$$$$$  /$$$$$$ \n";
+	cout << "| $$$$$$$$|  $$  /$$/$$__  $$| $$__  $$|_  $$_/  | $$  | $$ /$$__  $$|____  $$\n";
+	cout << "| $$__  $$ \  $$/$$/ $$$$$$$$| $$  \ $$  | $$    | $$  | $$| $$  \__/ /$$$$$$$\n";
+	cout << "| $$  | $$  \  $$$/| $$_____/| $$  | $$  | $$ /$$| $$  | $$| $$      /$$__  $$\n";
+	cout << "| $$  | $$   \  $/ |  $$$$$$$| $$  | $$  |  $$$$/|  $$$$$$/| $$     |  $$$$$$$\n";
+	cout << "|__/  |__/    \_/   \_______/|__/  |__/   \___/   \______/ |__/      \_______/\n";
+	cout << "Fet per Bernat Vinals Vendrell\n";
 }
