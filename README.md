@@ -1,4 +1,4 @@
-# Adevnture in C++ with parser
+# Adventure in C++ with parser
 This project is not meant to be used as a guide to make a parser and it is not meant to release as a game at the momment. 
 It's original goal is for educational porpuses.
 
@@ -59,21 +59,21 @@ Main Storyline:
 # DICTIONARY:
 
 ### VERBS:
- - Grab
+ - Grab (Used)
  - Use
  - Play
  - Throw
- - Get
- - Talk
+ - Get (Used)
+ - Talk (Used)
  - Drink
  - Buy
  - Combine
  - Acces
  - Ask
  - Sleep
- - Go
- - Punch
- - Drop
+ - Go (Used)
+ - Punch (Used)
+ - Drop (Used)
  
 ### NAMES, ITEMS AND OTHERS :
  - Out (Adverb)
