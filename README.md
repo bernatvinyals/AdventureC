@@ -62,22 +62,22 @@ Main Storyline:
 ```
 Input: go + north,south,west,east
 ```
-Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk,Ask), Meeting office(), Storage(), Storage2(), Market(Buy), Reception(Ask), Open Office(Talk), Balcony().
+Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk,Ask), Meeting office(), Storage(), Storage2(), Market(Buy),Free time office(Sleep, Play), Reception(Ask), Open Office(Talk), Balcony(Throw, Grab).
 # DICTIONARY:
 
 ### VERBS:
  - Grab (Used)
  - Use
- - Play
- - Throw
+ - Play (Used)
+ - Throw (Used)
  - Get (Used)
  - Talk (Used)
- - Drink
+ - Drink (Used)
  - Buy (Special) **Not done**
  - Combine (Special) **Not done**
  - Acces
  - Ask (Special) **Not done**
- - Sleep
+ - Sleep (Used)
  - Go (Used)
  - Punch (Used)
  - Drop (Used)
@@ -94,6 +94,9 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
  - Colleagues (NPC)
  - Secretary (NPC)
  
+ - Couch(Scene)
+ - Videogames(Scene)
+ 
  - Pen (Object) !No function yet
  - Coffee grains (Object)
  - Soda can (Object)
@@ -102,6 +105,7 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
  - Secretary mug  (Object) (Used)
  - 5$ (Object) (Used)
  - Bosses mug (Object) (Used)
+ - Coffee (Object) (Used)
  
 
 # TODO:
