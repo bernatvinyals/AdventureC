@@ -151,20 +151,20 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		}
 		break;
 	case 3: //Reception
-		
+		cout << "This is reception. Nothing fancy but it does the job for this type of company.\n";
 		break;
 	case 4: //Market
 		if (inventari[1].hotinc==true)
 		{
-			cout << "Since you have 5$ now you can buy 'Coffee grains' or 'Soda can'";
+			cout << "This is the Marketplace. A steamy place but everything that you bought here has always worked and been fine so... Since you have 5$ now you can buy 'Coffee grains' or 'Soda can'\n";
 		}
 		else
 		{
-			cout << "This is the Marketplace, i could buy things but i don't have money right now.";
+			cout << "This is the Marketplace, i could buy things but i don't have money right now.\n";
 		}
 		break;
 	case 5: //Meeting room
-
+		cout << "This is the meeting room. It is the most corporate room in this building. It appears that there's a notebook, maybe i can browse it's contents... There's also a calculator here that i could use.\n";
 		break;
 	case 6: //Open office
 		if (comprovadors[1] == true && comprovadors[2] == false)
@@ -182,11 +182,11 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		if (comprovadors[2] == true && comprovadors[3] == false)
 		{
 			comprovadors[3] = true;
-			cout << "This is the best room of all. You're tired you can sleep. You want to play games? You can! Drink soda? You can do that too! Truly the best room... But i must go to storage and get this done.\n";
+			cout << "This is the best room of all. You're tired you can sleep at the couch. You want to play games? You can! Drink soda? You can do that too! Truly the best room... But i must go to storage and get this done.\n";
 		}
 		else
 		{
-			cout << "This is the best room of all. You're tired you can sleep. You want to play games? You can! Drink soda? You can do that too! Truly the best room...\n";
+			cout << "This is the best room of all. You're tired you can sleep at the couch. You want to play games? You can! Drink soda? You can do that too! Truly the best room...\n";
 		}
 		break;
 	case 8: //Storage
@@ -227,5 +227,5 @@ void showHeader() {
 	cout << "| $$  | $$  \\  $$$/| $$_____/| $$  | $$  | $$ /$$| $$  | $$| $$      /$$__  $$\n";
 	cout << "| $$  | $$   \\  $/ |  $$$$$$$| $$  | $$  |  $$$$/|  $$$$$$/| $$     |  $$$$$$$\n";
 	cout << "|__/  |__/    \\_/   \\_______/|__/  |__/   \\___/   \\______/ |__/      \\_______/\n";
-	cout << "Fet per Bernat Vinals Vendrell\n \n \n";
+	cout << "Made by Bernat Vinals\n \n \n";
 }

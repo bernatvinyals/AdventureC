@@ -8,6 +8,10 @@ extern Object inventari[10];
 extern bool comprovadors[8];
 
 void omplirInventari(Object inventari[]) {
+	for (int i = 0; i < 8; i++)//amount of items
+	{
+		comprovadors[i] = false;
+	}
 	inventari[0].Nom = "Bosses mug"; //Can get it by picking it up at the secretary office
 	inventari[0].hotinc = false;
 	inventari[0].onEsta = 2;
@@ -29,6 +33,19 @@ void omplirInventari(Object inventari[]) {
 	inventari[6].Nom = "Soda Can"; //Can get this by buying it on the store
 	inventari[6].hotinc = false;
 	inventari[6].onEsta = 34;
+	inventari[7].Nom = "Mug with Coffee (Coffee)"; //Can get this by combining the bosses mug with Coffee grains 
+	inventari[7].hotinc = false;
+	inventari[7].onEsta = 34;
+}
+void emptyInventari(Object inventari[]) {
+	for (int i = 0; i < 10; i++)
+	{
+		inventari[i].hotinc = false;
+	}
+	for (int i = 0; i < 8; i++)//amount of items
+	{
+		comprovadors[i] = false;
+	}
 }
 void grabItem(Object &inventari, bool &isItem, int hab) {
 	if (inventari.hotinc == false)
@@ -63,8 +80,8 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
-	ConsoleClear();
-	cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
+	//ConsoleClear();
+	cout << "+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 	switch (CN)
 	{
 	case 10401:
@@ -79,11 +96,18 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			hab = 2;
 		}
 		break;
-
+	case 10508:
+		if (true)
+		{
+			cout << "You try to talk a little bit more with your boss but he refuses and you procced to leave.";
+			hab = 2;
+		}
+	
+		break;
 	case 11308:
 		cout << "You punch your boss without a reason. \n";
 		cout << "He suddently grabs you and throws you into the ground telling you that youre fired \n";
-		cout << "Game over";
+		cout << "Game over\n";
 		notend = false;
 		break;
 	case 10007://Grab Mug
@@ -159,7 +183,12 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	case 21012://ask secretary for storage key
 		if (second == 16)
 		{
-			//__________________________________________________add what 21016 does
+			if (comprovadors[4] == false)
+			{
+				comprovadors[4] = true;
+				inventari[4].hotinc = true;
+				cout << "The secretary gives you the Storage key. Now don't lose it!\n";
+			}
 		}
 		break;
 	case 20007://Grab Mug
@@ -228,6 +257,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			if (comprovadors[5] == true)
 			{
 				inventari[1].hotinc = true;
+				cout << "After some talking with the receptionist you get 5$ to spend in supplies.\n";
 			}
 		}
 		break;
@@ -280,6 +310,28 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	case 41204:
 		hab = 3;
 		break;
+	case 40710:
+		if (inventari[1].hotinc == true)
+		{
+			if (second == 11)
+			{
+				cout << "You bought a pack of Coffee grains and one Soda Can. A bit expensive but it works.\n";
+				inventari[1].hotinc = false;
+				inventari[5].hotinc = true;
+				inventari[6].hotinc = true;
+			}
+			else
+			{
+				cout << "You bought 2 packs of Coffe grains with the money that they gave you. One of these packs go directly to storage but with the other one i can now combine it with the bosses mug and finally give this coffee to him.\n";
+				inventari[1].hotinc = false;
+				inventari[5].hotinc = true;
+			}
+		}
+		else
+		{
+			cout << "What am i going to buy without cash?";
+		}
+		break;
 	case 40007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
 		break;
@@ -323,8 +375,18 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		dropItem(inventari[6], isHaveit, hab);
 		break;
 
-	
-	
+
+
+	case 50902://browse notebook
+		cout << "You procced to browse this notebook and find an odd pattern. You see that there's a Youtube link printed in every single pair page. Maybe you should see what it contains.";
+		break;
+	case 51205:
+		hab = 2;
+		break;
+	case 50121: //use calculator
+		cout << "You spend some time using the calculator witout a reason.";
+		break;
+
 	case 61204:
 		hab = 7;
 		break;
@@ -333,7 +395,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		break;
 	case 60509:
 		cout << "You have a great time talking with your colleagues but you also forget that you had to get coffee for your boss.\n";
-		cout << "Game over";
+		cout << "Game over\n";
 		notend = false;
 	case 60007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
@@ -396,6 +458,14 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		break;
 	case 71205:
 		hab = 6;
+		break;
+	case 71119://sleep in couch
+		cout << "You are very lazy and procced to sleep a while on the couch. Problem is... it wasn't just a while, it was all day!\nGame Over\n";
+		notend = false;
+		break;
+	case 70220: // Play Videogames
+		cout << "Another day back to 'work' for you if it wasn't that your boss found you playing for a while instead of doing the simple assignment that is preparing coffee\nGame Over\n";
+		notend = false;
 		break;
 	case 70007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
@@ -540,6 +610,18 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 
 	case 101205:
 		hab = 7;
+		break;
+	case 10318://Throw coffee
+		if (inventari[7].hotinc == true)
+		{
+			cout << "You throw every single drop of coffee through the balcony with stress and anger.\nYou feel like you're wasting time doing this job and procced to fill for unemployment and quit this city.\nYou wonder if this was the right decision, to leave the city and focus on yourself.\n Game Over\n";
+			notend = false;
+		}
+		else
+		{
+			isHaveit = true;
+		}
+		
 		break;
 	case 100007://Grab Mug
 		grabItem(inventari[0], isItem, hab);

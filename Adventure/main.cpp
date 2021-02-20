@@ -14,8 +14,8 @@ int pharser(string phrase, int hab, int &second) {
 	int CN;
 	bool saved = false;
 	//                  0        1       2        3       4      5        6       7      8        9       10       11     12      13      14           
-	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "combine", "acces", "ask", "sleep", "go", "punch", "drop"};
-	string names[18] = {"receptionist", "out", "pen", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary", "money" };
+	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "combine", "browse", "ask", "sleep", "go", "punch", "drop"};
+	string names[22] = {"receptionist", "out", "notebook", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary", "money", "coffee", "couch", "videogames", "calculator" };
 
 	for (size_t i = 0; i < 15; i++)//Mirar els verbs
 	{
@@ -31,12 +31,12 @@ int pharser(string phrase, int hab, int &second) {
 		}
 	}
 	saved = false;
-	for (size_t i = 0; i < 18; i++)//Mirar els noms/objectes
+	for (size_t i = 0; i < 22; i++)//Mirar els noms/objectes
 	{
 		if (saved)
 		{
 			saved = false;
-			for (size_t i = 0; i < 18; i++)//Mirar els noms/objectes2
+			for (size_t i = 0; i < 22; i++)//Mirar els noms/objectes2
 			{
 				if (saved)
 				{
@@ -78,9 +78,6 @@ int pharser(string phrase, int hab, int &second) {
 Object inventari[10];
 bool comprovadors[8];
 int main() {
-	int habitacio = 1;
-	int CN;
-	int second = 0;
 	bool repetir = true;
 	string repeat;
 	string phrase;
@@ -88,18 +85,22 @@ int main() {
 	omplirInventari(inventari);
 	while (repetir)
 	{
+		int habitacio = 1;
+		int CN;
+		int second = 0;
 		int chres = true;
 		bool inici = true;
 		bool finished = false;
 		bool notend = true;
+		ConsoleClear();
+		emptyInventari(inventari);
 		showHeader();
 		do {
-			//ConsoleClear();
 			whatRoom(habitacio);
 			whatItemInRoom(habitacio, inventari, inici, finished, comprovadors);
 
 			//DEBUG
-			cout << endl;
+			cout << endl << endl;
 			for (int i = 0; i < 10; i++)//amount of items
 			{
 				if (inventari[i].hotinc == true) { cout << "1 "; }
@@ -117,13 +118,31 @@ int main() {
 			{
 				notend = false;
 			}
+			else if (phrase == "drink coffee")
+			{
+				cout << "You drink the coffee that was meant for your boss. You feel great about it since he's an ass to you but now you're back to the begining.\nGame Over\n";
+				notend = false;
+			}
+			else if (phrase == "combine bosses mug with coffee grains" || phrase == "combine coffee grains with bosses mug")
+			{
+				if (inventari[0].hotinc == true && inventari[5].hotinc == true)
+				{
+					inventari[0].hotinc = false;
+					inventari[5].hotinc = false;
+					inventari[7].hotinc = true;
+				}
+				else
+				{
+					cout << "You need the objects required to combine.\n";
+				}
+			}
 			else
 			{
 				CN = pharser(phrase, habitacio, second);
+				cout << CN << endl;
+				cout << second;
+				accio(CN, inventari, habitacio, notend, comprovadors, second);
 			}
-			cout << CN << endl;
-			cout << second;
-			accio(CN, inventari, habitacio, notend, comprovadors,second);
 
 		} while (notend);
 		while (chres)
