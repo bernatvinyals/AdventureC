@@ -76,7 +76,7 @@ void dropItem(Object &inventari, bool &isItem, int hab) {
 	
 }
 void displayInventory() {
-	string phrase;
+	string phrase="#";
 	cout << "\n+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 	cout << "On inventory: ";
 	for (int i = 0; i < 10; i++)
@@ -87,8 +87,16 @@ void displayInventory() {
 			phrase.append(", ");
 		}
 	}
-	phrase.resize(phrase.size() - 2);
-	cout << phrase<<".\n";
+	if (phrase != "#")
+	{
+		phrase.resize(phrase.size() - 2);
+		phrase.erase(phrase.begin());
+		cout << phrase << ".\n";
+	}
+	else
+	{
+		cout << "You don't have anything right now.\n";
+	}
 	cout << "+----------------------------------------------------------------------------------------------------------------------+\n";	
 }
 
@@ -96,7 +104,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
-	//ConsoleClear();
+	ConsoleClear();
 	cout << "+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 	switch (CN)
 	{
@@ -205,6 +213,14 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 				inventari[4].hotinc = true;
 				cout << "The secretary gives you the Storage key. Now don't lose it!\n";
 			}
+			else
+			{
+				cout << "You already asked for the keys.";
+			}
+		}
+		else
+		{
+
 		}
 		break;
 	case 20007://Grab Mug

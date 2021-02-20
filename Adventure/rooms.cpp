@@ -207,6 +207,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 	}
 	if (checkItem(inventari, hab))
 	{
+		cout << endl;
 		for (int i = 0; i < 10; i++)//amount of items
 		{
 			if (inventari[i].onEsta == hab)
@@ -227,5 +228,5 @@ void showHeader() {
 	cout << "| $$  | $$  \\  $$$/| $$_____/| $$  | $$  | $$ /$$| $$  | $$| $$      /$$__  $$\n";
 	cout << "| $$  | $$   \\  $/ |  $$$$$$$| $$  | $$  |  $$$$/|  $$$$$$/| $$     |  $$$$$$$\n";
 	cout << "|__/  |__/    \\_/   \\_______/|__/  |__/   \\___/   \\______/ |__/      \\_______/\n";
-	cout << "Made by Bernat Vinals\n \n \n";
+	cout << "                       Made by Bernat Vinals\n \n \n";
 }
