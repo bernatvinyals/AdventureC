@@ -32,6 +32,11 @@ DROP:
 ```
 Input: drop + $Object
 ```
+KNOWING WHAT YOU HAVE:
+```
+Input: inventory
+Output: On inventory: Item1, Item2.
+```
 
 ### THINGS THAT WON'T AFFECT THE OUTCOME
 Phrases like "talk to the secretary" will be read as "talk secretary". This is done so it can generate the appropiate id and do the right action on actions.cpp
