@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "funcions.h"
-
+#include "ConsoleControl/ConsoleControl.h"
 
 using namespace std;
 extern Object inventari[10];
@@ -63,6 +63,8 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
+	ConsoleClear();
+	cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
 	switch (CN)
 	{
 	case 10401:
@@ -220,8 +222,14 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	case 31205:
 		hab = 4;
 		break;
-	case 30500:
-		//Posar la condicio de que necesito diners per comprar el cafe----------------------------------------------------------
+	case 31000: //ask receptionist for money
+		if (second == 17)
+		{
+			if (comprovadors[5] == true)
+			{
+				inventari[1].hotinc = true;
+			}
+		}
 		break;
 	case 30007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
@@ -588,5 +596,6 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	{
 		cout << "I don't have that item in orther to drop it!\n";
 	}
+	cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
 	cout << endl;
 }

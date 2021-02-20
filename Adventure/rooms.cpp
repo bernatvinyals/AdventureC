@@ -12,42 +12,92 @@ void whatRoom(int hab) {
 	case 1: //Boss Ofice
 		cout << "Boss Office \n";
 		cout << "East: Secretary Office \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "| # |   |   |   |   |\n";
+		cout <<	"+---+---+---+---+---+\n";
+		cout <<	"|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 2: //Secretary Office
 		cout << "Secretary Office \n";
 		cout << "West: Boss Office \nEast: Meeting Room \nSouth: Reception \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   | # |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 3:
 		cout << "Reception \n";
 		cout << "North: Secretary Office \nWest: Market \nEast: Open Office \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   | # |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 4:
 		cout << "Market \n";
 		cout << "East: Reception \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "| # |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 5:
 		cout << "Meeting room \n";
 		cout << "West: Secretary Office \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   | # |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 6:
 		cout << "Open office \n";
 		cout << "West: Reception \nEast: Open Office \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   | # |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 7:
 		cout << "Free time office \n";
 		cout << "North: Storage \nWest: Open Office \nEast: Balcony \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   | # |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 8:
 		cout << "Storage \n";
 		cout << "East: Storage 2 \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   | # |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 9:
 		cout << "Storage 2 \n";
 		cout << "West: Storage \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   | # |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	case 10:
 		cout << "Balcony \n";
 		cout << "West: Free time office \n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   |   |\n";
+		cout << "+---+---+---+---+---+\n";
+		cout << "|   |   |   |   | # |\n";
+		cout << "+---+---+---+---+---+\n";
 		break;
 	default:
 		cout << "??? \n";
@@ -89,7 +139,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 	case 2: //Secretary Office
 		if (comprovadors[0]== true && comprovadors[1] == false)
 		{
-			cout << "You get out of the boss office and decide to go to \'Storage 2\' and pick the coffee grains that you need.\nAlso you decide to grab the 'bosses mug'.\n(To do so say 'bosses mug')\nAlso it seems that the secretary wants to talk to you.";
+			cout << "You get out of the boss office and decide to go to \'Storage 2\' and pick the coffee grains that you need.\nAlso you decide to grab the 'bosses mug'.\n(To do so by saying 'grab bosses mug')\nAlso it seems that the secretary wants to talk to you.";
 			comprovadors[1] = true;
 			
 			//cout << "I can see that there is a couple of objects here:\n" << objphrase;
@@ -97,13 +147,21 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		else
 		{
 			cout << "This is the secretary office, nothing special about it.\n";
-			break;
+			
 		}
+		break;
 	case 3: //Reception
-
+		
 		break;
 	case 4: //Market
-		
+		if (inventari[1].hotinc==true)
+		{
+			cout << "Since you have 5$ now you can buy 'Coffee grains' or 'Soda can'";
+		}
+		else
+		{
+			cout << "This is the Marketplace, i could buy things but i don't have money right now.";
+		}
 		break;
 	case 5: //Meeting room
 
@@ -163,11 +221,11 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 void showHeader() {
 	cout << "  /$$$$$$                                 /$$                                 \n";
 	cout << " /$$__  $$                               | $$                                 \n";
-	cout << "| $$  \ $$ /$$    /$$/$$$$$$  /$$$$$$$  /$$$$$$   /$$   /$$  /$$$$$$  /$$$$$$ \n";
+	cout << "| $$  \\ $$ /$$    /$$/$$$$$$  /$$$$$$$  /$$$$$$   /$$   /$$  /$$$$$$  /$$$$$$ \n";
 	cout << "| $$$$$$$$|  $$  /$$/$$__  $$| $$__  $$|_  $$_/  | $$  | $$ /$$__  $$|____  $$\n";
-	cout << "| $$__  $$ \  $$/$$/ $$$$$$$$| $$  \ $$  | $$    | $$  | $$| $$  \__/ /$$$$$$$\n";
-	cout << "| $$  | $$  \  $$$/| $$_____/| $$  | $$  | $$ /$$| $$  | $$| $$      /$$__  $$\n";
-	cout << "| $$  | $$   \  $/ |  $$$$$$$| $$  | $$  |  $$$$/|  $$$$$$/| $$     |  $$$$$$$\n";
-	cout << "|__/  |__/    \_/   \_______/|__/  |__/   \___/   \______/ |__/      \_______/\n";
-	cout << "Fet per Bernat Vinals Vendrell\n";
+	cout << "| $$__  $$ \\  $$/$$/ $$$$$$$$| $$  \\ $$  | $$    | $$  | $$| $$  \\__/ /$$$$$$$\n";
+	cout << "| $$  | $$  \\  $$$/| $$_____/| $$  | $$  | $$ /$$| $$  | $$| $$      /$$__  $$\n";
+	cout << "| $$  | $$   \\  $/ |  $$$$$$$| $$  | $$  |  $$$$/|  $$$$$$/| $$     |  $$$$$$$\n";
+	cout << "|__/  |__/    \\_/   \\_______/|__/  |__/   \\___/   \\______/ |__/      \\_______/\n";
+	cout << "Fet per Bernat Vinals Vendrell\n \n \n";
 }

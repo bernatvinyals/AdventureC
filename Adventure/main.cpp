@@ -109,7 +109,18 @@ int main() {
 			cout << endl;
 			getline(cin, phrase); //Verb + nom
 			transform(phrase.begin(), phrase.end(), phrase.begin(), ::tolower); //Fer minuscules
-			CN = pharser(phrase, habitacio, second);
+			if (phrase == "inventory")
+			{
+				//Show inventory function
+			}
+			else if (phrase == "restart game")
+			{
+				notend = false;
+			}
+			else
+			{
+				CN = pharser(phrase, habitacio, second);
+			}
 			cout << CN << endl;
 			cout << second;
 			accio(CN, inventari, habitacio, notend, comprovadors,second);
