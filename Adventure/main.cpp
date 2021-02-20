@@ -112,7 +112,7 @@ int main() {
 			transform(phrase.begin(), phrase.end(), phrase.begin(), ::tolower); //Fer minuscules
 			if (phrase == "inventory")
 			{
-				//Show inventory function
+				displayInventory();
 			}
 			else if (phrase == "restart game")
 			{
@@ -120,7 +120,9 @@ int main() {
 			}
 			else if (phrase == "drink coffee")
 			{
+				cout << "+\n----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 				cout << "You drink the coffee that was meant for your boss. You feel great about it since he's an ass to you but now you're back to the begining.\nGame Over\n";
+				cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
 				notend = false;
 			}
 			else if (phrase == "combine bosses mug with coffee grains" || phrase == "combine coffee grains with bosses mug")
@@ -133,7 +135,9 @@ int main() {
 				}
 				else
 				{
+					cout << "\n+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 					cout << "You need the objects required to combine.\n";
+					cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
 				}
 			}
 			else

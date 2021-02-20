@@ -11,3 +11,4 @@ void omplirInventari(Object inventari[]);
 void emptyInventari(Object inventari[]);
 void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool comprovadors[]);
 void showHeader();
+void displayInventory();

@@ -75,6 +75,22 @@ void dropItem(Object &inventari, bool &isItem, int hab) {
 	}
 	
 }
+void displayInventory() {
+	string phrase;
+	cout << "\n+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
+	cout << "On inventory: ";
+	for (int i = 0; i < 10; i++)
+	{
+		if (inventari[i].hotinc == true)
+		{
+			phrase = inventari[i].Nom;
+			phrase.append(", ");
+		}
+	}
+	phrase.resize(phrase.size() - 2);
+	cout << phrase<<".\n";
+	cout << "+----------------------------------------------------------------------------------------------------------------------+\n";	
+}
 
 void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[], int &second) {
 	cout << endl;
