@@ -42,9 +42,9 @@ Main Storyline:
 - You are now on the secretary office and the game asks you to grab the "bosses mug" and go to a room that's called "Storage 2" to pick the Coffee grains in order to make coffee
 - Once youre on the "Free time office" and try to enter the game won't allow it and will ask you to go grab the "Storage Key" at the secretary office by talking to the secretary
 - Now go back to storage to enter "Storage 2" and find no "Coffee grains".
-- **(Not implemented)** The game will ask you to go and talk to the receptionist in order to get "5$" and go to the market and buy "Coffe Grains"
-- **(Not implemented)** Now with the "Bosses mug" and "Coffee grains" in your inventory you have to go to the "Free time office" and ``` combine bosses mug ``` 
-- **(Not implemented)** Now the game will ask you what do you want to combine that with and in order to progress you have to say ``` coffee grains``` works in reversal
+- The game will ask you to go and talk to the receptionist in order to get "5$" and go to the market and buy "Coffe Grains"
+- Now with the "Bosses mug" and "Coffee grains" in your inventory you have to go to the "Free time office" and ``` combine bosses mug with coffee grains``` works in reversal.
+- **(Not implemented)** Now the game will ask you what do you want to combine that with and in order to progress you have to say ``` coffee grains``` 
 - **(Not implemented)** And it's almost over! Now you have to go to your bosses office and you will beat the game.
 
 # MAP AND ANVIGATION:
@@ -66,21 +66,21 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
 # DICTIONARY:
 
 ### VERBS:
- - Grab (Used)
- - Use (Used)
- - Play (Used)
- - Throw (Used)
- - Get (Used)
- - Talk (Used)
- - Drink (Used)
+ - Grab 
+ - Use 
+ - Play 
+ - Throw
+ - Get 
+ - Talk
+ - Drink
  - Buy (Special) You can do: ```buy item1``` or ```buy item1 and item2```
- - Combine (Special) **Not done**
- - Browse (Used)
- - Ask (Special) 
- - Sleep (Used)
- - Go (Used)
- - Punch (Used)
- - Drop (Used)
+ - Combine (Special) You can do: ```combine item1 with item2```
+ - Browse 
+ - Ask (Special) You can do: ```ask name1 for/about name2```
+ - Sleep 
+ - Go 
+ - Punch 
+ - Drop 
  
 ### NAMES, ITEMS AND OTHERS :
  - Out (Adverb)
