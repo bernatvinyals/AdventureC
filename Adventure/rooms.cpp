@@ -114,7 +114,7 @@ bool checkItem(Object inventari[], int hab) {
 	}
 	return false;
 }
-void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool comprovadors[]) {
+void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool notend, bool comprovadors[]) {
 	cout << endl;
 	string objphrase;
 	switch (hab)
@@ -130,8 +130,21 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		}
 		if (finished)
 		{
-			cout << "You give the cup of coffee to your boss. \n The end.";
+			notend = false;
+			cout << "\n\nAfter all this going back and fourth you finally bring Coffee to your boss\n";
+			cout << "__________ ____    ______________       __________ ___      ___________   \n";
+			cout << "MMMMMMMMMM `MM'    `MM'`MMMMMMMMM       `MMMMMMMMM `MM\\     `M'`MMMMMMMb.\n";
+			cout << "/   MM   \\  MM      MM  MM      \\        MM      \\  MMM\\     M  MM    `Mb\n";
+			cout << "    MM      MM      MM  MM               MM         M\\MM\\    M  MM     MM\n";
+			cout << "    MM      MM      MM  MM    ,          MM    ,    M \\MM\\   M  MM     MM\n";
+			cout << "    MM      MMMMMMMMMM  MMMMMMM          MMMMMMM    M  \\MM\\  M  MM     MM\n";
+			cout << "    MM      MM      MM  MM    `          MM    `    M   \\MM\\ M  MM     MM\n";
+			cout << "    MM      MM      MM  MM               MM         M    \\MM\\M  MM     MM\n";
+			cout << "    MM      MM      MM  MM               MM         M     \\MMM  MM     MM\n";
+			cout << "    MM      MM      MM  MM      /        MM      /  M      \\MM  MM    .M9\n";
+			cout << "   _MM_    _MM_    _MM__MMMMMMMMM       _MMMMMMMMM _M_      \M _MMMMMMM9'\n\n";
 		}
+
 		else
 		{
 			break;
@@ -190,7 +203,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		}
 		break;
 	case 8: //Storage
-
+		cout << "Here is where we put everything technological like computers and keyboards. The next room, Storage 2 is the one that has everything food related.\n";
 		break;
 	case 9: //Storage 2
 		if (comprovadors[5]==false)

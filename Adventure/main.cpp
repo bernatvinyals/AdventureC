@@ -94,10 +94,16 @@ int main() {
 		bool notend = true;
 		ConsoleClear();
 		emptyInventari(inventari);
+		int menuacction;
 		showHeader();
+
 		do {
 			whatRoom(habitacio);
-			whatItemInRoom(habitacio, inventari, inici, finished, comprovadors);
+			whatItemInRoom(habitacio, inventari, inici, finished, notend, comprovadors);
+			if (!notend)
+			{
+				break;
+			} 
 
 			//DEBUG
 			cout << endl << endl;
@@ -106,6 +112,8 @@ int main() {
 				if (inventari[i].hotinc == true) { cout << "1 "; }
 				if (inventari[i].hotinc == false) { cout << "0 "; }
 			}
+
+
 			//Pharser
 			cout << endl;
 			getline(cin, phrase); //Verb + nom
@@ -129,9 +137,13 @@ int main() {
 			{
 				if (inventari[0].hotinc == true && inventari[5].hotinc == true)
 				{
+					cout << "\n+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
+					cout << "You now have Coffee! It's time to bring it to your boss.\n";
+					cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
 					inventari[0].hotinc = false;
 					inventari[5].hotinc = false;
 					inventari[7].hotinc = true;
+					finished = true;
 				}
 				else
 				{

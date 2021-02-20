@@ -9,6 +9,6 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 void whatRoom(int hab);
 void omplirInventari(Object inventari[]);
 void emptyInventari(Object inventari[]);
-void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool comprovadors[]);
+void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished,bool notend, bool comprovadors[]);
 void showHeader();
 void displayInventory();

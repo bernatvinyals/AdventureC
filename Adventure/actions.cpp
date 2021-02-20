@@ -104,7 +104,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
-	ConsoleClear();
+	//ConsoleClear();
 	cout << "+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 	switch (CN)
 	{
