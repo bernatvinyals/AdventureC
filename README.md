@@ -62,21 +62,21 @@ Main Storyline:
 ```
 Input: go + north,south,west,east
 ```
-Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk,Ask), Meeting office(), Storage(), Storage2(), Market(Buy),Free time office(Sleep, Play), Reception(Ask), Open Office(Talk), Balcony(Throw, Grab).
+Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk,Ask), Meeting office(Browse), Storage(), Storage2(), Market(Buy),Free time office(Sleep, Play), Reception(Ask), Open Office(Talk), Balcony(Throw, Grab).
 # DICTIONARY:
 
 ### VERBS:
  - Grab (Used)
- - Use
+ - Use (Used)
  - Play (Used)
  - Throw (Used)
  - Get (Used)
  - Talk (Used)
  - Drink (Used)
- - Buy (Special) **Not done**
+ - Buy (Special) You can do: ```buy item1``` or ```buy item1 and item2```
  - Combine (Special) **Not done**
- - Acces
- - Ask (Special) **Not done**
+ - Browse (Used)
+ - Ask (Special) 
  - Sleep (Used)
  - Go (Used)
  - Punch (Used)
@@ -96,8 +96,8 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
  
  - Couch(Scene)
  - Videogames(Scene)
+ - Notebook (Scene)
  
- - Pen (Object) !No function yet
  - Coffee grains (Object)
  - Soda can (Object)
  - Storage key (Object) (Used)
@@ -110,6 +110,5 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
 
 # TODO:
 1. Finish story
-2. Add double name parser
-3. Add an Inventory command or shortcut
+2. Add an Inventory command or shortcut
 4. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over;
