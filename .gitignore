@@ -5,7 +5,8 @@
 *.db
 *.opendb
 *.ipch
-Adventure/.vs/Adventure/v15/.suo
+Adventure/.vs
+Adventure/enc_temp_folder
 *.pdb
 *.obj
 *.idb
