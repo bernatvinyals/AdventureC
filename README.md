@@ -17,6 +17,10 @@ EXAMPLE: $Verb = "punch" $Name/Item/Adverb/Adjective/Direction = "boss"
 ```
 Input: punch boss
 ```
+### MULTIPLE Name/Item/Adverb/Adjective COMMAND:
+```
+Input: ask receptionist for money
+```
 
 ### USING THE INVENTORY AND OBJECTS
 GRAB:
@@ -58,6 +62,7 @@ Main Storyline:
 ```
 Input: go + north,south,west,east
 ```
+Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk,Ask), Meeting office(), Storage(), Storage2(), Market(Buy), Reception(Ask), Open Office(Talk), Balcony().
 # DICTIONARY:
 
 ### VERBS:
@@ -68,10 +73,10 @@ Input: go + north,south,west,east
  - Get (Used)
  - Talk (Used)
  - Drink
- - Buy
- - Combine
+ - Buy (Special) **Not done**
+ - Combine (Special) **Not done**
  - Acces
- - Ask
+ - Ask (Special) **Not done**
  - Sleep
  - Go (Used)
  - Punch (Used)
@@ -92,11 +97,11 @@ Input: go + north,south,west,east
  - Pen (Object) !No function yet
  - Coffee grains (Object)
  - Soda can (Object)
- - Storage key (Object)
+ - Storage key (Object) (Used)
  - Ps1 controller (Object)
- - Secretary mug  (Object)
- - 5$ (Object)
- - Bosses mug (Object)
+ - Secretary mug  (Object) (Used)
+ - 5$ (Object) (Used)
+ - Bosses mug (Object) (Used)
  
 
 # TODO:
