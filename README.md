@@ -114,6 +114,8 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
  
 
 # TODO:
-1. Finish story
-2. Add an Inventory command or shortcut
-4. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over;
+1. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over.
+
+#KNOWN BUGS + FUTRE IMPROVEMENTS:
+to write
+
