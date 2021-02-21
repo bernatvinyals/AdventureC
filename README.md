@@ -49,8 +49,8 @@ Main Storyline:
 - Now go back to storage to enter "Storage 2" and find no "Coffee grains".
 - The game will ask you to go and talk to the receptionist in order to get "5$" and go to the market and buy "Coffe Grains"
 - Now with the "Bosses mug" and "Coffee grains" in your inventory you have to go to the "Free time office" and ``` combine bosses mug with coffee grains``` works in reversal.
-- **(Not implemented)** Now the game will ask you what do you want to combine that with and in order to progress you have to say ``` coffee grains``` 
-- **(Not implemented)** And it's almost over! Now you have to go to your bosses office and you will beat the game.
+- Now the game will ask you what do you want to combine that with and in order to progress you have to say ``` coffee grains``` 
+- And it's almost over! Now you have to go to your bosses office and you will beat the game.
 
 # MAP AND ANVIGATION:
 ```
@@ -114,6 +114,8 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
  
 
 # TODO:
-1. Finish story
-2. Add an Inventory command or shortcut
-4. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over;
+1. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over.
+
+#KNOWN BUGS + FUTRE IMPROVEMENTS:
+to write
+
