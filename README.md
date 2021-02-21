@@ -121,8 +121,4 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
 
 # TODO:
 1. Every room has 2 functions
-2. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over.
-
-#KNOWN BUGS + FUTRE IMPROVEMENTS:
-to write
 
