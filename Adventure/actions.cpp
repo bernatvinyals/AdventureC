@@ -104,7 +104,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
-	//ConsoleClear();
+	ConsoleClear();
 	cout << "+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 	switch (CN)
 	{
@@ -410,7 +410,7 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 
 
 	case 50902://browse notebook
-		cout << "You procced to browse this notebook and find an odd pattern. You see that there's a Youtube link printed in every single pair page. Maybe you should see what it contains.";
+		cout << "You procced to browse this notebook and find an odd pattern. You see that there's a Youtube link printed in every single pair page. Maybe you should see what it contains. https://youtu.be/dQw4w9WgXcQ\n";
 		break;
 	case 51205:
 		hab = 2;
