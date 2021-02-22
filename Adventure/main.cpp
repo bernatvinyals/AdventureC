@@ -120,6 +120,7 @@ int main() {
 			transform(phrase.begin(), phrase.end(), phrase.begin(), ::tolower); //Fer minuscules
 			if (phrase == "inventory")
 			{
+				ConsoleClear();
 				displayInventory();
 			}
 			else if (phrase == "restart game")
