@@ -561,6 +561,10 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 	case 81201:
 		hab = 7;
 		break;
+	case 80623:
+		cout << "You drink this suspicious liquid and instantly pass out. Your coworkers find you at the groud and call an ambulance. The ambulance was so late that you dided right there, at the groud, on your workspace... Mental note for your next live don't drink something suspicious that turns out to be dish detergent.\n";
+		notend = false;
+		break;
 	case 80007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
 		break;

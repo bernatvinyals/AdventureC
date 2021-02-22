@@ -15,7 +15,7 @@ int pharser(string phrase, int hab, int &second) {
 	bool saved = false;
 	//                  0        1       2        3       4      5        6       7      8        9       10       11     12      13      14           
 	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "combine", "browse", "ask", "sleep", "go", "punch", "drop"};
-	string names[23] = {"receptionist", "out", "notebook", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary", "money", "coffee", "couch", "videogames", "calculator", "pice of paper"};
+	string names[24] = {"receptionist", "out", "notebook", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary", "money", "coffee", "couch", "videogames", "calculator", "pice of paper", "suspicious cup"};
 
 	for (size_t i = 0; i < 15; i++)//Mirar els verbs
 	{
@@ -31,12 +31,12 @@ int pharser(string phrase, int hab, int &second) {
 		}
 	}
 	saved = false;
-	for (size_t i = 0; i < 23; i++)//Mirar els noms/objectes
+	for (size_t i = 0; i < 24; i++)//Mirar els noms/objectes
 	{
 		if (saved)
 		{
 			saved = false;
-			for (size_t i = 0; i < 23 ; i++)//Mirar els noms/objectes2
+			for (size_t i = 0; i < 24 ; i++)//Mirar els noms/objectes2
 			{
 				if (saved)
 				{
