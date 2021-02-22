@@ -25,12 +25,12 @@ Input: ask receptionist for money
 ### USING THE INVENTORY AND OBJECTS
 GRAB:
 ```
-Input: grab + $Object
+Input: grab + Item
 ```
 
 DROP:
 ```
-Input: drop + $Object
+Input: drop + Item
 ```
 KNOWING WHAT YOU HAVE:
 ```
@@ -45,12 +45,18 @@ Phrases like "talk to the secretary" will be read as "talk secretary". This is d
 Main Storyline:
 - You appear on your bosses office and you have to procced to the next and only room by saying ``` go east``` or ``` go out ```.
 - You are now on the secretary office and the game asks you to grab the "bosses mug" and go to a room that's called "Storage 2" to pick the Coffee grains in order to make coffee
-- Once youre on the "Free time office" and try to enter the game won't allow it and will ask you to go grab the "Storage Key" at the secretary office by talking to the secretary
+- Once youre on the "Free time office" and try to enter the game won't allow it and will ask you to go grab the "Storage Key" at the secretary office by talking to the secretary and ```ask secretary for storage key```
 - Now go back to storage to enter "Storage 2" and find no "Coffee grains".
-- The game will ask you to go and talk to the receptionist in order to get "5$" and go to the market and buy "Coffe Grains"
+- The game will ask you to go and talk to the receptionist in order to get "5$" (On Reception(Location) say ```ask receptionist for money```) and go to the market and buy "Coffe Grains.
 - Now with the "Bosses mug" and "Coffee grains" in your inventory you have to go to the "Free time office" and ``` combine bosses mug with coffee grains``` works in reversal.
 - Now the game will ask you what do you want to combine that with and in order to progress you have to say ``` coffee grains``` 
 - And it's almost over! Now you have to go to your bosses office and you will beat the game.
+
+# OTHER ENDINGS:
+- You can punch your boss at the begining of the game.
+- Talking to your colleagues.
+- Sleeping at the couch on the Free time office.
+
 
 # MAP AND ANVIGATION:
 ```
@@ -115,8 +121,4 @@ Locations + Num of actions: Boss Office(Talk, Punch), Secretary Office(Grab,Talk
 
 # TODO:
 1. Every room has 2 functions
-2. You can talk with the secretary and she will ask you to put soda on her mug, buying soda will remove the 5$ bill but once given to the secretary she’ll convince your boss to not bring his coffee and the game will be over.
-
-#KNOWN BUGS + FUTRE IMPROVEMENTS:
-to write
 
