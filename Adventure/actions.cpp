@@ -100,7 +100,7 @@ void displayInventory() {
 	cout << "+----------------------------------------------------------------------------------------------------------------------+\n";	
 }
 
-void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[], int &second) {
+void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors[], int &second, bool &finished) {
 	cout << endl;
 	bool isItem=false; //Per dir que el objecte no esta (true)
 	bool isHaveit = false;
@@ -183,7 +183,12 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 
 
 	case 21205:
-		if (comprovadors[0] == true)
+		if (inventari[7].hotinc == true || finished == true)
+		{
+			hab = 1;
+			break;
+		}
+		else if (comprovadors[0] == true && finished == false)
 		{
 			cout << "You shouldn't go into the bosses office until you have the coffee\n";
 		}
@@ -217,10 +222,6 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 			{
 				cout << "You already asked for the keys.";
 			}
-		}
-		else
-		{
-
 		}
 		break;
 	case 20007://Grab Mug
@@ -361,8 +362,11 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		}
 		else
 		{
-			cout << "What am i going to buy without cash?";
+			cout << "What am i going to buy without cash?\n";
 		}
+		break;
+	case 40711:
+		cout << "If anything you should buy Coffee Grains first.\n";
 		break;
 	case 40007://Grab Mug
 		grabItem(inventari[0], isItem, hab);
@@ -496,8 +500,16 @@ void accio(int CN, Object inventari[], int &hab, bool &notend, bool comprovadors
 		notend = false;
 		break;
 	case 70220: // Play Videogames
-		cout << "Another day back to 'work' for you if it wasn't that your boss found you playing for a while instead of doing the simple assignment that is preparing coffee\nGame Over\n";
-		notend = false;
+		if (inventari[3].hotinc==true)
+		{
+			cout << "Another day back to 'work' for you if it wasn't that your boss found you playing for a while instead of doing the simple assignment that is preparing coffee\nGame Over\n";
+			notend = false;
+		}
+		else
+		{
+			cout << "There's no controller here, maybe i should look around.";
+		}
+
 		break;
 	case 70007://Grab Mug
 		grabItem(inventari[0], isItem, hab);

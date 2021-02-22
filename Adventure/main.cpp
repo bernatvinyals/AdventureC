@@ -15,7 +15,7 @@ int pharser(string phrase, int hab, int &second) {
 	bool saved = false;
 	//                  0        1       2        3       4      5        6       7      8        9       10       11     12      13      14           
 	string verbs[15] = {"grab", "use", "play", "throw", "get", "talk", "drink", "buy", "combine", "browse", "ask", "sleep", "go", "punch", "drop"};
-	string names[22] = {"receptionist", "out", "notebook", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary", "money", "coffee", "couch", "videogames", "calculator" };
+	string names[23] = {"receptionist", "out", "notebook", "north", "east", "west", "south", "bosses mug", "boss", "colleagues", "coffee grains", "soda can", "storage key", "ps1 controller", "secretary mug", "5$", "secretary", "money", "coffee", "couch", "videogames", "calculator", "pice of paper"};
 
 	for (size_t i = 0; i < 15; i++)//Mirar els verbs
 	{
@@ -31,12 +31,12 @@ int pharser(string phrase, int hab, int &second) {
 		}
 	}
 	saved = false;
-	for (size_t i = 0; i < 22; i++)//Mirar els noms/objectes
+	for (size_t i = 0; i < 23; i++)//Mirar els noms/objectes
 	{
 		if (saved)
 		{
 			saved = false;
-			for (size_t i = 0; i < 22; i++)//Mirar els noms/objectes2
+			for (size_t i = 0; i < 23 ; i++)//Mirar els noms/objectes2
 			{
 				if (saved)
 				{
@@ -100,18 +100,18 @@ int main() {
 		do {
 			whatRoom(habitacio);
 			whatItemInRoom(habitacio, inventari, inici, finished, notend, comprovadors);
-			if (!notend)
+			if (notend== false)
 			{
 				break;
 			} 
 
-			//DEBUG
+			/*DEBUG Inventory
 			cout << endl << endl;
 			for (int i = 0; i < 10; i++)//amount of items
 			{
 				if (inventari[i].hotinc == true) { cout << "1 "; }
 				if (inventari[i].hotinc == false) { cout << "0 "; }
-			}
+			}*/
 
 
 			//Pharser
@@ -128,15 +128,28 @@ int main() {
 			}
 			else if (phrase == "drink coffee")
 			{
-				cout << "+\n----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
-				cout << "You drink the coffee that was meant for your boss. You feel great about it since he's an ass to you but now you're back to the begining.\nGame Over\n";
-				cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
-				notend = false;
+				if (inventari[7].hotinc == true)
+				{
+					ConsoleClear();
+					cout << "+\n----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
+					cout << "You drink the coffee that was meant for your boss. You feel great about it since he's an ass to you but now you're back to the begining.\nGame Over\n";
+					cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
+					notend = false;
+				}
+				else
+				{
+					ConsoleClear();
+					cout << "+\n----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
+					cout << "You can't drink something that you don't have!\n";
+					cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
+				}
+
 			}
 			else if (phrase == "combine bosses mug with coffee grains" || phrase == "combine coffee grains with bosses mug")
 			{
 				if (inventari[0].hotinc == true && inventari[5].hotinc == true)
 				{
+					ConsoleClear();
 					cout << "\n+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 					cout << "You now have Coffee! It's time to bring it to your boss.\n";
 					cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
@@ -147,6 +160,7 @@ int main() {
 				}
 				else
 				{
+					ConsoleClear();
 					cout << "\n+----RESULT:-----------------------------------------------------------------------------------------------------------+\n";
 					cout << "You need the objects required to combine.\n";
 					cout << "+----------------------------------------------------------------------------------------------------------------------+\n";
@@ -157,7 +171,7 @@ int main() {
 				CN = pharser(phrase, habitacio, second);
 				cout << CN << endl;
 				cout << second;
-				accio(CN, inventari, habitacio, notend, comprovadors, second);
+				accio(CN, inventari, habitacio, notend, comprovadors, second, finished);
 			}
 
 		} while (notend);

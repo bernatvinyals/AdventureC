@@ -114,7 +114,7 @@ bool checkItem(Object inventari[], int hab) {
 	}
 	return false;
 }
-void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool notend, bool comprovadors[]) {
+void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, bool &notend, bool comprovadors[]) {
 	cout << endl;
 	string objphrase;
 	switch (hab)
@@ -124,9 +124,10 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		if (started)
 		{
 			cout << "You are having a horrible day at work and your boss just asked for more coffee as if you were a maid. You obviously accept because this is the only job that would hire you as an intern and you have to pay your student loans.";
-			started = true;
+			started = false;
 			comprovadors[0] = true;
 			comprovadors[1] = false;
+			break;
 		}
 		if (finished)
 		{
@@ -143,8 +144,10 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 			cout << "    MM      MM      MM  MM               MM         M     \\MMM  MM     MM\n";
 			cout << "    MM      MM      MM  MM      /        MM      /  M      \\MM  MM    .M9\n";
 			cout << "   _MM_    _MM_    _MM__MMMMMMMMM       _MMMMMMMMM _M_      \M _MMMMMMM9'\n\n";
+			hab = 0;
+			comprovadors[8] = true;
+			break;
 		}
-
 		else
 		{
 			break;
@@ -213,12 +216,12 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		}
 		break;
 	case 10: //Balcony
-
+		cout << "This is the balcony. Is the most disgusting place in here becaouse everything is dirty and gross. Every time you're here you want to throw something." ;
 		break;
 	default:
 		break;
 	}
-	if (checkItem(inventari, hab))
+	if (checkItem(inventari, hab)&& comprovadors[8] == false)
 	{
 		cout << endl;
 		for (int i = 0; i < 10; i++)//amount of items
