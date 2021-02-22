@@ -143,7 +143,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 			cout << "    MM      MM      MM  MM               MM         M    \\MM\\M  MM     MM\n";
 			cout << "    MM      MM      MM  MM               MM         M     \\MMM  MM     MM\n";
 			cout << "    MM      MM      MM  MM      /        MM      /  M      \\MM  MM    .M9\n";
-			cout << "   _MM_    _MM_    _MM__MMMMMMMMM       _MMMMMMMMM _M_      \M _MMMMMMM9'\n\n";
+			cout << "   _MM_    _MM_    _MM__MMMMMMMMM       _MMMMMMMMM _M_      \\M _MMMMMMM9'\n\n";
 			hab = 0;
 			comprovadors[8] = true;
 			break;
