@@ -206,7 +206,7 @@ void whatItemInRoom(int hab, Object inventari[], bool &started, bool finished, b
 		}
 		break;
 	case 8: //Storage
-		cout << "Here is where we put everything technological like computers and keyboards. The next room, Storage 2 is the one that has everything food related.\n";
+		cout << "Here is where we put everything technological like computers and keyboards. The next room, Storage 2 is the one that has everything food related. I see that there's a glass of something that looks a bit suspicious, should i drink it?\n";
 		break;
 	case 9: //Storage 2
 		if (comprovadors[5]==false)
